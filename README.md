@@ -18,7 +18,7 @@ The model evaluates a recurring-revenue subscription business transitioning thro
 |---|:---:|:---:|:---:|
 | **Cash Runway** | **8 Months** | **24+ Months** | **24+ Months** |
 | **Operating Breakeven** | **N/A (> 24M)** | **Month 1** | **Month 1** |
-| **Peak Cash Deficit** | **-$84,669** | **$0.00** | **$0.00** |
+| **Peak Cash Deficit** | **-$84,669** | **$159,667** | **$267,958** |
 | **Month 24 Ending Cash** | **-$84,669** | **$2,278,029** | **$13,908,931** |
 | **24M Cumulative Net Revenue** | **$755,026** | **$3,748,550** | **$16,716,521** |
 | **LTV : CAC Multiple** | **8.9x** | **47.4x** | **110.0x** |
