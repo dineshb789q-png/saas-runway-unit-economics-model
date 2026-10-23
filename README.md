@@ -45,3 +45,21 @@ The model evaluates a recurring-revenue subscription business transitioning thro
 ## Model Architecture
 
 The workbook is designed under institutional financial modeling standards across three decoupled sheets:
+- **`01_Dashboard`:** Executive KPI scorecards (Runway, Zero-Cash Month, Net Burn, LTV:CAC), 24-month cash curve visualization, and breakeven combo charts.
+- **`02_Forecast_24M`:** Calculation engine applying mid-month customer averaging, cohort churn applied strictly to beginning user balances, and operational cash-flow rollover.
+- **`03_Assumptions`:** Modular driver repository segregating customer acquisition volume, monetization tiers, variable COGS, and fixed operating expenses.
+
+---
+
+## Audit-Proof Integrity System
+
+To prevent silent calculation breaks, row 38–40 on the calculation engine runs automated reconciliations across all 24 periods:
+- **Cash Continuity Check:** Validates that Month $N$ Beginning Cash exactly reconciles with Month $N-1$ Ending Cash ($\Delta = \$0.00$).
+- **Customer Conservation Check:** Enforces that Beginning Active + New Acquired - Churned reconciles to Ending Active Users ($\Delta = 0$).
+- If any cell across the 24 months violates continuous balance, the dashboard immediately alerts: `🔴 AUDIT FAILURE`.
+
+---
+
+## File Contents
+- `SaaS_24M_Runway_Model.xlsx`: Master financial model spreadsheet file.
+- `images/`: High-resolution dashboard previews and scenario stress-test charts.
